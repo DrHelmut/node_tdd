@@ -57,5 +57,14 @@ describe('bowling test suite', function() {
 		var score = bowlingGame.score();
 		score.should.equal(24); // (10+3+4)+3+4
 	});
+	
+	it('test a prefect game', function() {
+
+		for (var i = 0; i < 12; i++) {
+			bowlingGame.roll(10);
+		}
+		var score = bowlingGame.score();
+		score.should.equal(300);
+	});
 
 });
