@@ -33,5 +33,17 @@ describe('bowling test suite', function() {
 		var score = bowlingGame.score();
 		score.should.equal(0);
 	});
+	
+	it('test a game with a spare', function() {
+
+		bowlingGame.roll(5);
+		bowlingGame.roll(5); // spare
+		bowlingGame.roll(3);
+		for (var i = 0; i < 17; i++) {
+			bowlingGame.roll(0);
+		}
+		var score = bowlingGame.score();
+		score.should.equal(16); // (10 + 3)+3
+	});
 
 });
