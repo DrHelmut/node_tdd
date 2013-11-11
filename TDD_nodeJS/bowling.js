@@ -25,14 +25,26 @@ game.prototype.score = function() {
 	var score = 0;
 	var rollIndex=0;
 	for(var frame=0; frame<10;frame++) {
-		if( isSpare(rollIndex) )  //test the spare
+			
+		if( isStrike(rollIndex)) {
+			score+= 10 + rolls[rollIndex+1] + rolls[rollIndex+2];
+			rollIndex++;
+		
+		} else if( isSpare(rollIndex) ) {
 			score+=10 + rolls[rollIndex+2];
-		else
+			rollIndex+=2;
+			
+		} else {
 			score+=rolls[rollIndex]+rolls[rollIndex+1];
-		rollIndex+=2;
+			rollIndex+=2;
+		}
 	}
 	return score;
 };
+
+function isStrike(rollIndex) {
+	return rolls[rollIndex] == 10;
+}
 
 function isSpare(rollIndex) {
 	return (rolls[rollIndex]+rolls[rollIndex+1]== 10 );
