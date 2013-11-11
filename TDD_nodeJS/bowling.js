@@ -51,6 +51,10 @@ function isSpare(rollIndex) {
 }
 
 game.prototype.roll = function(pines) {
+	if(pines>10) {
+		logger.error('a roll cannot exceed 10');
+		throw Error('a roll cannot exceed 10');
+	}
 	logger.info('rolling '+pines+' pines');
 	// each roll is recorded
 	rolls[currentRoll++] = pines;

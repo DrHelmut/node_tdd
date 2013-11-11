@@ -1,6 +1,7 @@
 var fs = require('fs');
 var bowling = require('../bowling.js');
 var should = require('should');
+var expect = require('expect.js');
 
 describe('bowling test suite', function() {
 	
@@ -67,4 +68,11 @@ describe('bowling test suite', function() {
 		score.should.equal(300);
 	});
 
+	it('test exception - a roll cannot exceed 10', function() {
+		
+		expect(function() {
+			bowlingGame.roll(11);
+		}).to.throwError();
+		
+	});
 });
