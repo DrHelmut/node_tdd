@@ -7,10 +7,12 @@ var logger = new (winston.Logger)({
 	 ]
 });
 
+var score = null;
 var game = function() {
 	logger.info('bowling game created');
+	score = 0;
 };
-var score = 0;
+
 
 game.prototype.score = function() {
 	logger.info('returning score');
