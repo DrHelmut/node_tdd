@@ -23,8 +23,13 @@ var game = function() {
 game.prototype.score = function() {
 	logger.info('returning score');
 	var score = 0;
-	for(var i=0; i<rolls.length;i++) {
-		score+=rolls[i];
+	var rollIndex=0;
+	for(var frame=0; frame<10;frame++) {
+		if( (rolls[rollIndex]+rolls[rollIndex+1]) == 10) //test the spare
+			score+=10 + rolls[rollIndex+2];
+		else
+			score+=rolls[rollIndex]+rolls[rollIndex+1];
+		rollIndex+=2;
 	}
 	return score;
 };
