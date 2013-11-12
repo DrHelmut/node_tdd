@@ -4,7 +4,7 @@
   "description": "TDD_nodeJS",
   "main": "bowling.js",
   "scripts": {
-	   "test": "./node_modules/mocha/.bin/mocha -w"
+	   "test": "mocha"
   },
   "repository": "",
   "keywords": [
