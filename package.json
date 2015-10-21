@@ -4,7 +4,7 @@
   "description": "TDD_nodeJS",
   "main": "bowling.js",
   "scripts": {
-    "test": "mocha -u tdd"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
