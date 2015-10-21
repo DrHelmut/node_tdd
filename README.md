@@ -1,4 +1,4 @@
-node_tdd
+node_tdd [![Build Status](https://semaphoreci.com/api/v1/projects/0e56383f-3697-4e9f-9a65-fc830264cf78/557538/badge.svg)](https://semaphoreci.com/drhelmut/node_tdd)
 ========
 
 small project used to introduce my dev team to TDD. I chose the bowling kata for being simple to implement and having obvious test cases
