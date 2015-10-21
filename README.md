@@ -5,3 +5,6 @@ small project used to introduce my dev team to TDD. I chose the bowling kata for
 
 list remote branch with "git branch -a" command
 switch to a specific branch with the command "git checkout <name_of_branch>" each branch is the full implementation of a step from this tutorial
+
+
+run "npm install" command to download dependecies, then "npm test" to execute unit test

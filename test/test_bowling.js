@@ -67,4 +67,11 @@ describe('bowling test suite', function() {
 		score.should.equal(300);
 	});
 
+	it('test exception - a roll cannot exceed 10', function() {
+        
+        (function(){
+          bowlingGame.roll(11);
+        }).should.throw('a roll cannot exceed 10');
+        
+	});
 });
