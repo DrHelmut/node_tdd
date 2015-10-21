@@ -1,18 +1,29 @@
 {
-  "name": "TDD_nodeJS",
-  "version": "0.1.0",
-  "description": "TDD_nodeJS",
-  "main": "bowling.js",
-  "scripts": {
+    "name": "TDD_nodeJS",
+    "version": "0.1.0",
+    "description": "TDD_nodeJS",
+    "main": "bowling.js",
+    "scripts": {
 	   "test": "mocha"
-  },
-  "repository": "",
-  "keywords": [
-    "Node.js",
-    "Eclipse",
-    "Nodeclipse"
-  ],
-  "author": "",
-  "license": "BSD",
-  "readmeFilename": "README.md"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DrHelmut/node_tdd"
+    },
+    "keywords": [
+        "Node.js",
+        "TDD",
+        "Mocha"
+    ],
+    "author": "Hugo Capocci",
+    "license": "BSD",
+    "readmeFilename": "README.md",
+    "engines": {
+        "node": "4.2.1"
+    },
+    "devDependencies": {
+        "mocha": "^2.3.3",
+        "should": "^7.1.0",
+        "winston": "^0.7.2"
+    }
 }
