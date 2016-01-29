@@ -9,7 +9,6 @@ var logger = new (winston.Logger)({
 var rolls = null;
 var currentRoll = null;
 
-
 var game = function() {
 	logger.info('bowling game created');
 	currentRoll= 0;
@@ -18,7 +17,6 @@ var game = function() {
 		rolls[i]=0;
 	}
 };
-
 
 game.prototype.score = function() {
 	logger.info('returning score');
